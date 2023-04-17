@@ -30,6 +30,8 @@ app.post("/welcome", auth, (req, res) => {
   res.status(200).json({ mensagem: "Você fez login!" });
 });
 
+/*
 app.listen(3000, () =>
   console.log('REST API server ready at: http://localhost:3000'),
 )
+*/
