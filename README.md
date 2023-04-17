@@ -11,6 +11,7 @@
 # Introdução
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/nandowastaken/monitore.me-api/monitore-me.yml)
+![GitHub](https://img.shields.io/github/license/nandowastaken/monitore.me-api)
 ![GitHub contributors](https://img.shields.io/github/contributors/nandowastaken/monitore.me-api)
 
 Para realizar o bom funcionamento do Backend do meu projeto <a href="https://github.com/nandowastaken/monitore.me">Monitore.me</a>, foi construída esta API REST, com TypeScript, Prisma, PostgreSQL e Docker. Os detalhes do desenvolvimento e as funcionalidades desta API eu compartilharei mais tarde em uma versão futura deste README. Até lá, divirta-se pensando em como este projeto vai estar quando finalizado.
