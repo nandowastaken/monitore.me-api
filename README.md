@@ -10,7 +10,7 @@
 
 # Introdução
 
-https://img.shields.io/github/actions/workflow/status/nandowastaken/monitore.me-api/monitore-me.yml
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/nandowastaken/monitore.me-api/monitore-me.yml)
 ![GitHub](https://img.shields.io/github/license/nandowastaken/monitore.me-api)
 ![GitHub contributors](https://img.shields.io/github/contributors/nandowastaken/monitore.me-api)
 
