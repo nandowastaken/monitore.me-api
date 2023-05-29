@@ -11,16 +11,18 @@ datasource db {
 }
 
 model Monitor {
-  id        Int     @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   nome      String
-  email     String  @unique
+  email     String   @unique
   senha     String
   numero    String
   foto      String
-  curso     Curso   @relation(fields: [cursoId], references: [id])
-  materia   Materia @relation(fields: [materiaId], references: [id])
+  curso     Curso    @relation(fields: [cursoId], references: [id])
+  materia   Materia  @relation(fields: [materiaId], references: [id])
   cursoId   Int
   materiaId Int
+  Horario   Horario? @relation(fields: [horarioId], references: [id])
+  horarioId Int?
 }
 
 model Curso {
@@ -39,25 +41,18 @@ model Materia {
 }
 
 model Horario {
-  id            Int             @id @default(autoincrement())
-  monitor_id    Int             @unique
-  HorarioInicio HorarioInicio[]
-  HorarioFinal  HorarioFinal[]
-}
+  id         Int @id @default(autoincrement())
+  monitor_id Int @unique
 
-model HorarioInicio {
-  horario       Horario  @relation(fields: [horarioId], references: [id])
-  horarioId     Int
-  horarioInicio DateTime
-  localizacao   String
-
-  @@id([horarioId, horarioInicio])
-}
-
-model HorarioFinal {
-  horario      Horario  @relation(fields: [horarioId], references: [id])
-  horarioId    Int
-  horarioFinal DateTime
-
-  @@id([horarioId, horarioFinal])
+  horarioSegundaInicio DateTime
+  horarioSegundaFinal  DateTime
+  horarioTercaInicio   DateTime
+  horarioTercaFinal    DateTime
+  horarioQuartaInicio  DateTime
+  horarioQuartaFinal   DateTime
+  horarioQuintaInicio  DateTime
+  horarioQuintaFinal   DateTime
+  horarioSextaInicio   DateTime
+  horarioSextaFinal    DateTime
+  Monitor              Monitor[]
 }

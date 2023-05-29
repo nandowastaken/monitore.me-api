@@ -11,8 +11,6 @@ const monitor = require("./routes/monitor");
 const curso = require("./routes/curso");
 const materia = require("./routes/materia");
 const horario = require("./routes/horario");
-const horarioInicial = require("./routes/horarioInicio");
-const horarioFinal = require("./routes/horarioFinal");
 
 app.use(express.json())
 app.use(cors({}))
@@ -22,8 +20,7 @@ app.use("/monitores", monitor);
 app.use("/horarios", horario);
 app.use("/materias", materia);
 app.use("/cursos", curso);
-app.use("/horariosIniciais", horarioInicial);
-app.use("/horariosFinais", horarioFinal);
+app.use("/horarios", horario);
 
 
 app.post("/welcome", auth, (req, res) => {
